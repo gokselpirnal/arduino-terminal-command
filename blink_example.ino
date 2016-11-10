@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 
 typedef void (*func) (String cmd);
-extern func functions[];
+extern func functions[]; // wtf xd 
 
 SoftwareSerial bt(9, 10); // (tx,rx)
 const int LED1 = 8; // led pin
