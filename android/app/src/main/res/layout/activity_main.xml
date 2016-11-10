@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/turn_on_off"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            app:fb_borderColor="#FFFFFF"
+            app:fb_defaultColor="#0A3D91"
+            app:fb_focusColor="#ffffff"
+            app:fb_fontIconResource="&#xf294;"
+            app:fb_iconPosition="left"
+            app:fb_radius="0dp"
+            app:fb_text=""
+            app:fb_textColor="#FFFFFF"
+            app:fb_textSize="16sp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            app:fb_defaultColor="#8DC63F"
+            app:fb_focusColor="#ffffff"
+            app:fb_fontIconResource="&#xf127;"
+            app:fb_iconPosition="left"
+            app:fb_radius="0dp"
+            app:fb_text=""
+            app:fb_textColor="#FFFFFF"
+            app:fb_textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/device_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Bağlantı yok"
+        android:textAlignment="center"
+        android:textColor="#fff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#333">
+
+        <TextView
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp"
+            android:scrollbars="vertical"
+            android:textColor="#ccc"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#3171b4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="$"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="8"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:imeActionLabel="Gönder"
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:textColor="#fff"
+                android:textColorHint="#aaffffff"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                app:fb_defaultColor="@color/colorPrimary"
+                app:fb_focusColor="#ffffff"
+                app:fb_fontIconResource="&#xf1d8;"
+                app:fb_iconPosition="left"
+                app:fb_radius="0dp"
+                app:fb_text=""
+                app:fb_textColor="#FFFFFF"
+                app:fb_textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
