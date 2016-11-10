@@ -1,4 +1,4 @@
-# Arduino terminal command with param
+# Arduino terminal command params
 
 ```sh
 blink -t 20 -i 100 -a
